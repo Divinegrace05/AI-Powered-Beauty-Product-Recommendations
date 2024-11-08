@@ -136,8 +136,8 @@ To run this project locally, follow these steps:
 ### Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Divinegrace05/AI-powered-Beauty-Product-Recommendations.git
-   cd AI-powered-Beauty-Product-Recommendations
+   git clone https://github.com/Divinegrace05/AI-Powered-Beauty-Product-Recommendations.git
+   cd AI-Powered-Beauty-Product-Recommendations
    ```
 2. Install required packages:
     ```bash
