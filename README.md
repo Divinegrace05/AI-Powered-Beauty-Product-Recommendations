@@ -1,6 +1,5 @@
 # AI-Powered-Skincare-Recommendations-For-Melanin-Skin
-
-![2d248f5507752726ddc2198b39071e4e](https://github.com/user-attachments/assets/9c7a2247-b758-4aee-8bc7-50fa0bf76f2d)
+![img](https://github.com/user-attachments/assets/2403184a-4433-4f48-a1cc-45f9bb197db6)
 
 ### Table of Contents
 
