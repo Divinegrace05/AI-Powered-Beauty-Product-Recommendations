@@ -41,7 +41,7 @@ The dataset used in this project was gathered via a Python-based web scraper, in
 ### Exploratory Data Analysis
 
 #### 1. Count of Products by Skin Type
-![Count of Products by Skin Type](https://github.com/ECCHERUIYOT/AI-Powered-Skincare-Recommendations-For-Melanin-Skin/blob/Echeruiyot/images/image1.png)
+![skintype](https://github.com/user-attachments/assets/af072621-bc6b-48d9-9be2-b5ce11dea9eb)
 
 * The distribution shows that products labeled for combination skin are the most common, followed by those for dry, normal, and then oily skin. This insight can guide product selection based on prevalent skin types and consumer demand within the Black women demographic.
 
