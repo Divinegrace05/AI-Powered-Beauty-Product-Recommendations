@@ -90,7 +90,6 @@ We implemented a hybrid recommendation system that combines multiple techniques:
 ---
 
 ## System Interface
-### Streamlit Deployment for AI-Powered Beauty Product Recommendations
 The Streamlit application provides personalized product recommendations across a variety of beauty categories.
 
 - *User Interface*: An intuitive interface where users can select options based on preferences (e.g., skincare, makeup, fragrance).
