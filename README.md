@@ -74,6 +74,11 @@ We used a hybrid recommendation system combining the following techniques:
 
 ## System Interface
 The Streamlit app provides a simple, intuitive way for users to receive tailored skincare suggestions. Users input a product name or skin concern, and the app generates a list of recommended products based on their profile.
+![Home Page 1](https://github.com/user-attachments/assets/8f989d6e-5e7f-4f97-b2a1-51e21c5642c3)
+![Home Page 2](https://github.com/user-attachments/assets/5ab64f1a-9dd4-43cc-a055-3bf57ba4d170)
+![Highlights](https://github.com/user-attachments/assets/d07323a0-4f0d-4ffe-9c60-46bad479b709)
+![Content-Based](https://github.com/user-attachments/assets/62827675-c0e2-4fe1-86a5-96012e91e61a)
+
 
 ---
 
