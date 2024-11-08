@@ -5,11 +5,6 @@
 ## Project Overview
 This project focuses on building an AI-powered recommendation system for a variety of beauty products. While traditional recommendation systems tend to specialize in a single category, this project is designed to suggest a broad spectrum of products including skincare, haircare, supplements, perfumes, makeup, and more. This system aims to deliver personalized beauty recommendations that cater to users’ unique needs and preferences using advanced AI techniques.
 
-### Key Features
-- **Personalized Recommendations**: Uses a blend of content-based filtering, collaborative filtering (SVD), and sentiment analysis to deliver precise, customized recommendations across beauty categories.
-- **Product Highlights**: Allows users to select key highlights (e.g., "hydrating," "vegan," "anti-aging") for targeted recommendations that match specific product attributes.
-- **User-Friendly Interface**: Accessible through a Streamlit application, enabling users to enter beauty preferences and receive curated product suggestions.
-
 ---
 
 ## Problem Statement
