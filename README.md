@@ -1,65 +1,140 @@
-# AI POWERED BEAUTY PRODUCTS RECOMMENDATIONS
+# AI POWERED BEAUTY PRODUCTS RECOMMENDATION SYSTEM
+
 ![product](https://github.com/user-attachments/assets/ac674706-9096-4118-884b-4edd476499c8)
 
-### Table of Contents
+## Project Overview
+This project focuses on creating an AI-powered recommendation system to address a key gap in the skincare industry: the lack of personalized product recommendations for women of color. This demographic often has unique skincare needs—like managing hyperpigmentation, sensitivity, and hydration—yet current solutions frequently offer generalized recommendations that fail to consider these specific concerns. Our solution aims to fill this gap by providing tailored skincare recommendations using AI models optimized for melanin-rich skin.
 
-- [Business Overview](#business-overview)
-- [Business Understanding](#business-understanding)
-- [Data Understanding](#data-understanding)
-- [Modeling and Evaluation](#modeling-and-evaluation)
-- [Conclusion](#conclusion)
-- [Repository Navigation](#repository-navigation)
+### Key Features
+- **Personalized Recommendations**: Utilizing a combination of content-based filtering (ingredient-based similarity), collaborative filtering (SVD), and sentiment analysis (LSTM and Sentiment Intensity Analyzer).
+- **User-Friendly Interface**: Deployed on Streamlit, enabling users to enter their skincare needs and receive personalized product suggestions.
+- **Targeted for Melanin-Rich Skin**: Specifically focused on concerns like hyperpigmentation, dryness, and sensitivity that are more prevalent among women of color.
 
-## Business Overview
+---
 
-Our AI-powered recommendation system addresses the lack of tailored skincare solutions for individuals with melanin-rich skin. By leveraging two datasets on skin care products and products reviews by different users , our model delivers personalized skincare recommendations, achieving an accuracy of over 90% in predicting optimal products for various skin needs and on different budgets.
+## Problem Statement
+Despite the growing demand for skincare products among women of color, most recommendation systems lack specificity in addressing concerns unique to melanin-rich skin. This project aims to bridge this gap by developing an inclusive recommendation system that leverages advanced AI techniques to provide targeted skincare solutions.
 
-## Business Understanding
+## Objectives
+- **Develop** a recommendation system for melanin-rich skin using AI and ML techniques.
+- **Incorporate** content-based and collaborative filtering, as well as sentiment analysis, for accurate recommendations.
+- **Deploy** an accessible Streamlit interface for easy-to-use, personalized skincare suggestions.
 
-This project aims to develop a recommendation system using advanced AI techniques to cater specifically to Black women’s skincare needs. By integrating machine learning, content- based filtering, collaborative filtering, and sentiment analysis, the system will offer personalized skincare recommendations. Leveraging skin_tone (Author's skin tone (e.g. fair, tan, etc.) as a classification feature, we aim to distinguish and target products that align with melanin-rich skin concerns.
+---
 
-## Data Understanding
+## Stakeholders
+- **End Users**: Women of color seeking skincare products tailored to their specific needs.
+- **Skincare Brands**: Companies interested in reaching this demographic more effectively.
+- **Healthcare Professionals**: Dermatologists who may use the system as a tool for recommending products suited to melanin-rich skin.
 
-The dataset was collected via a Python scraper and contains:
-- Product Information: Over 8,000 beauty products from the Sephora online store, including product and brand names, prices, ingredients, ratings, and various features. 
-- User Reviews: Approximately 1 million reviews across over 2,000 products in the skincare category. These reviews include user appearances, skin types, and review ratings.
+---
 
-The key features include:
-- Product Features: `product_id`, `product_name`, `brand_name`, `ingredients`, `rating`, `price_ksh`, `new`, `out_of_stock`, `highlights`. 
-- Review Features: `author_id`, `rating`, `review_text`, `skin_type`, `skin_tone`, and
-`helpfulness`.
+## Data Description
+The dataset used was collected via a Python-based web scraper and includes the following key elements:
 
+1. **Product Data**: 
+   - Over 8,000 skincare products from the Sephora online store, including details on brand, ingredients, rating, price, and stock availability.
+   - Main Features: `product_id`, `product_name`, `brand_name`, `ingredients`, `rating`, `price_ksh`, `new`, `out_of_stock`, `highlights`.
 
-### EDA
+2. **User Reviews**:
+   - About 1 million reviews covering over 2,000 products in the skincare category, with details on user skin type, skin tone, and review ratings.
+   - Main Features: `author_id`, `rating`, `review_text`, `skin_type`, `skin_tone`, `helpfulness`.
 
-#### Count of Products by Skin Type
+---
+
+## Exploratory Data Analysis (EDA)
+### Product Distribution by Skin Type
 ![download](https://github.com/user-attachments/assets/afdbd9db-19a8-44db-803a-5741efe0c067)
-The distribution shows that products labeled for combination skin are the most common, followed by those for dry, normal, and then oily skin. This insight can guide product selection based on prevalent skin types and consumer demand within the Black women demographic.
+- The majority of products are labeled for combination skin, with fewer options for other types, guiding our recommendations for underserved demographics.
 
-#### Top 20 Recommended Products for Melanin Skin
-
+### Top Recommended Products for Melanin-Rich Skin
 ![download](https://github.com/user-attachments/assets/8946f8fa-8448-4107-a84e-03e661bd4b6c)
-The chart highlights skincare products tailored to the specific needs of melanated skin, focusing on hydration, hyperpigmentation, and sun protection. **Signature Moisturizer** leads with the highest recommendation count, emphasizing a strong demand for deep hydration. Products targeting dark spots, such as **Blue Algae Vitamin C Dark Spot Correcting Peel**, show the importance of tone-evening solutions, while sunscreens like **Mineral MatteSunscreen SPF 40 PA+++** address the need for effective sun protection without a white cast. This selection showcases a commitment to skincare that respects and meets the unique requirements of darker skin tones.
+- Highlights top products for hyperpigmentation and hydration, addressing unique needs of women with melanin-rich skin.
 
-#### Out of stock Products and Recommendations based on skin tone
-
-![download](https://github.com/user-attachments/assets/292c819f-04f0-44fa-b1c2-851bdb099e33)
-
-Lighter skin tones show a higher count of both in-stock and out-of-stock products. This contrasts with deep skin tones which have fewer options overall and lower in-stock counts. This discrepancy might indicate a supply gap for these deeper skin tones, which are more likely to face limited product availability.
-
-Products targeting melanated skin tones receive fewer recommendations, suggesting that product options may not fully address the needs or preferences of these individuals.
-
-#### Heatmap of Product Count by Skin Tone Category and Skin Type
+### Heatmap of Product Count by Skin Tone and Skin Type
 ![download](https://github.com/user-attachments/assets/85e65e5a-60de-4f85-8d36-bbc1aa258743)
+- Reveals a shortage of options for deeper skin tones, underlining the need for tailored skincare products.
 
-The heatmap analysis of `skin_type` and `skin_tone_category` highlights important insights that align closely with our objective of providing tailored skincare recommendations for Black women. Our data reveals a concentration of products available for combination and dry skin types, particularly within lighter skin tones. However, there is a notable scarcity of options for deeper skin tones, suggesting that Black women may have fewer product options specifically suited to their needs. This gap underscores the limited market focus on skincare for melanin-rich skin concerns, such as hyperpigmentation, dryness, and sensitivity, which are often more pronounced in deeper skin tones.
+---
 
-These findings directly support our business problem: many existing recommendation systems fail to provide targeted solutions for Black women. The evident lack of specialized options for drier skin in deeper tones emphasizes an opportunity to develop and recommend products that address this unique need. By prioritizing these underserved areas, our recommendation system can significantly enhance satisfaction and efficacy for Black women seeking products that work for their melanin-rich skin.
+## Modeling Approach
+We used a hybrid recommendation system combining the following techniques:
 
-## Modeling and Evaluation
+1. **Content-Based Filtering**: Calculates product similarity based on ingredients using cosine similarity.
+2. **Collaborative Filtering**: Utilizes Singular Value Decomposition (SVD) for user-product interaction patterns.
+3. **Sentiment Analysis**: Employs an LSTM model and Sentiment Intensity Analyzer to score reviews, prioritizing highly-rated products.
+4. **Hybrid Model**: Merges all techniques to deliver robust, personalized recommendations.
 
+### Evaluation
+- **Precision**: Measures the relevance of the recommended products.
+- **Recall**: Evaluates how well the recommendations capture the user’s preferences.
+- **F1-Score**: Balances precision and recall to optimize recommendation accuracy.
 
-## Conclusion
+---
+
+## System Interface
+The Streamlit app provides a simple, intuitive way for users to receive tailored skincare suggestions. Users input a product name or skin concern, and the app generates a list of recommended products based on their profile.
+
+---
+
+## Challenges and Solutions
+- **Data Limitations**: The dataset has limited diversity across brands, which we addressed by augmenting product features and expanding review sources.
+- **Model Optimization**: Balancing model performance in the hybrid approach required iterative fine-tuning.
+- **Sentiment Analysis**: Ensuring accurate sentiment classification was critical; challenges in NLP were addressed by refining the LSTM model.
+
+---
+
+## Future Improvements
+- **User Feedback Mechanism**: Incorporate feedback loops to allow users to rate recommendations, improving system accuracy.
+- **Dataset Expansion**: Increase the range of brands and product types to enhance recommendation quality.
+- **Partnerships**: Collaborate with skincare experts and dermatologists for validation and expanded reach.
+
+---
+
+## Getting Started
+To run this project locally, follow these steps:
+
+### Prerequisites
+- Python 3.8 or higher
+- Libraries: `pandas`, `numpy`, `scikit-learn`, `nltk`, `tensorflow`, `streamlit`, `cosine-similarity`
+
+### Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Divinegrace05/AI-powered-Beauty-Product-Recommendations.git
+   cd AI-powered-Beauty-Product-Recommendations
+2. Install required packages:
+    ```bash
+    pip install -r requirements.txt
+
+### Usage
+To start the Streamlit application:
+    ```bash
+    streamlit run skincareApp.py
+
 
 ## Repository Navigation
 
+This repository is structured to facilitate easy navigation and organization of files, datasets, scripts, and notebooks related to the AI-Powered Beauty Products Recommendation System project.
+
+### Directory Structure
+
+- **`data/`**: Contains the datasets used in this project. This includes both raw and processed data files that support the recommendation system and model training.
+- **`notebooks/`**: Jupyter notebooks for exploratory data analysis (EDA) and model training. Each notebook is organized to showcase various stages of analysis and model development.
+- **`models/`**: Contains saved machine learning models used in this project. These are ready-to-use models trained on the provided dataset.
+- **`scripts/`**: Python scripts that handle data preprocessing, feature engineering, and model evaluation. The scripts are modular to allow for easy adjustments and scaling.
+- **`app.py`**: The main Streamlit application file. This file runs the application, providing users with an interface to receive skincare product recommendations based on their inputs.
+- **`requirements.txt`**: Contains a list of all packages and dependencies required for the project. This file can be used to set up a virtual environment with the necessary libraries.
+
+---
+
+### Files and Scripts
+
+- **`app.py`**: This is the primary file to run the Streamlit application. Launch this file using `streamlit run app.py` to access the recommendation system interface.
+- **`requirements.txt`**: Lists all dependencies required to run the project, ensuring that the environment is correctly set up. Install dependencies with `pip install -r requirements.txt`.
+- **`EDA_notebook.ipynb`**: This Jupyter notebook contains the exploratory data analysis (EDA), where we explore patterns, relationships, and insights within the dataset.
+- **`Modeling_notebook.ipynb`**: This notebook covers machine learning model training and evaluation, detailing the models used in the recommendation system and their respective performance metrics.
+
+---
+
+Thank you for exploring the AI-Powered Beauty Products Recommendation System! This project is dedicated to inclusivity in the beauty industry by providing skincare recommendations specifically designed for melanin-rich skin.
