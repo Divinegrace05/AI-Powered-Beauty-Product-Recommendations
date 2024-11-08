@@ -1,4 +1,4 @@
-# AI-Powered-Beauty Products-Recommendations
+# AI POWERED BEAUTY PRODUCTS RECOMMENDATIONS
 ![img](https://github.com/user-attachments/assets/2403184a-4433-4f48-a1cc-45f9bb197db6)
 
 ### Table of Contents
