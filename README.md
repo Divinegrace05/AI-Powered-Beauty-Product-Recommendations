@@ -1,8 +1,6 @@
-![Home Page 1](https://github.com/user-attachments/assets/f0772fad-f5a9-440d-afd0-bd505749a1b5)To reflect the updated scope for a more comprehensive AI-powered beauty product recommendation system, the README and Jupyter notebook markdown sections should be adjusted to highlight the new range of products and broaden the purpose beyond melanin-specific skincare. Here’s a proposed revision:
+# AI-POWERED BEAUTY PRODUCT RECOMMENDATION SYSTEM
+![product](https://github.com/user-attachments/assets/d370cd58-a84b-472c-afa3-ea13a3424085)
 
----
-
-**README: AI-POWERED BEAUTY PRODUCT RECOMMENDATION SYSTEM**
 
 ## Project Overview
 This project focuses on building an AI-powered recommendation system for a variety of beauty products. While traditional recommendation systems tend to specialize in a single category, this project is designed to suggest a broad spectrum of products including skincare, haircare, supplements, perfumes, makeup, and more. This system aims to deliver personalized beauty recommendations that cater to users’ unique needs and preferences using advanced AI techniques.
