@@ -108,7 +108,7 @@ Throughout the project, some notable challenges included:
 - **Data Limitations**: The dataset was limited in brand and product diversity, which restricted the range of recommendations.
 - **Model Optimization**: Balancing the hybrid model’s performance was challenging, as both content-based and collaborative methods required fine-tuning to avoid biases.
 - **Sentiment Analysis Accuracy**: Ensuring accurate sentiment analysis was critical for prioritizing products, but limitations in natural language processing led to occasional inaccuracies in sentiment scoring.
-- 
+
 ## RECOMMENDATIONS
 To enhance the functionality and user engagement of this skincare recommendation system, several improvements are recommended:
 - **Enhance User Engagement**: Implement feedback mechanisms to allow users to rate and provide input on recommended products. This feedback loop would help refine the recommendations and improve overall user satisfaction.
