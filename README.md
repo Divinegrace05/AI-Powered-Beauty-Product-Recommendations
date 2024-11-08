@@ -123,7 +123,6 @@ To further enhance the system and expand its impact, the following steps are rec
 - **Integrate Educational Resources**: Include guides and educational content about skincare ingredients and routines for melanin-rich skin, empowering users to make informed decisions.
 - **Implement Feedback Loops**: Add mechanisms for users to rate and provide feedback on recommendations, allowing the system to learn and improve continuously.
 - **Collaborate with Brands**: Partner with major skincare brands like Garnier and other beauty companies to integrate this recommendation system directly into their platforms, making it accessible to a wider audience.
-
 This project serves as a foundation for creating an inclusive and personalized skincare experience, supporting users with tailored product recommendations that address their unique skincare needs.
 ---
 
@@ -159,6 +158,7 @@ To start the Streamlit application:
 - **`models/`**: Saved machine learning models.
 - **`scripts/`**: Python scripts for preprocessing, feature engineering, and evaluation.
 - **`app.py`**: Main Streamlit application file.
+
 
 # THANK YOU!
 ---
