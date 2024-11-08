@@ -149,7 +149,6 @@ To run this project locally, follow these steps:
 
 ### Usage
 To start the Streamlit application:
-    ```bash
     streamlit run skincareApp.py
     ```
 
