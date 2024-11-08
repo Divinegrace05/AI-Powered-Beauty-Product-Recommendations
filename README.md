@@ -63,7 +63,7 @@ The dataset used in this project was gathered via a Python-based web scraper, in
 * The Products pie chart shows the balance between new and existing products. The larger percentage of existing products (91%) suggests that the platform maintains a consistent range of products, with newer items being introduced selectively. This distribution can provide insights into the inventory management and refresh rates of the catalog over time.
 
 #### 4. Skin Tone Distribution by Price Tier
-![Skin Tone Distribution by Price Tier](https://github.com/ECCHERUIYOT/AI-Powered-Skincare-Recommendations-For-Melanin-Skin/blob/Echeruiyot/images/image4.png)
+![skintone](https://github.com/user-attachments/assets/6e1279f0-3247-479c-adef-3549870ebdab)
 * There is a noticeable price difference across skin tones. Products for melanated skin tend to have lower average prices, than non-melanated skin tones, highlighting more affordable options specifically formulated or suited for melanated skin. 
 
 #### 5. Heatmap of Product Count by Skin Tone Category and Skin Type
