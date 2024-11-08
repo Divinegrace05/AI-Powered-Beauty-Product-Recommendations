@@ -1,5 +1,5 @@
 # AI POWERED BEAUTY PRODUCTS RECOMMENDATIONS
-![img](https://github.com/user-attachments/assets/2403184a-4433-4f48-a1cc-45f9bb197db6)
+![product](https://github.com/user-attachments/assets/ac674706-9096-4118-884b-4edd476499c8)
 
 ### Table of Contents
 
