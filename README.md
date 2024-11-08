@@ -3,96 +3,88 @@
 ![product](https://github.com/user-attachments/assets/ac674706-9096-4118-884b-4edd476499c8)
 
 ## Project Overview
-This project focuses on creating an AI-powered recommendation system to address a key gap in the skincare industry: the lack of personalized product recommendations for women of color. This demographic often has unique skincare needs—like managing hyperpigmentation, sensitivity, and hydration—yet current solutions frequently offer generalized recommendations that fail to consider these specific concerns. Our solution aims to fill this gap by providing tailored skincare recommendations using AI models optimized for melanin-rich skin.
+This project introduces an AI-powered recommendation system for diverse beauty products tailored to users’ individual preferences and needs. The system spans multiple categories—skincare, haircare, makeup, supplements, perfumes, and more—providing comprehensive and personalized recommendations. By incorporating various recommendation techniques and leveraging user reviews, this project aims to offer a unique, all-encompassing experience for beauty enthusiasts.
 
 ### Key Features
-- **Personalized Recommendations**: Utilizing a combination of content-based filtering (ingredient-based similarity), collaborative filtering (SVD), and sentiment analysis (LSTM and Sentiment Intensity Analyzer).
-- **User-Friendly Interface**: Deployed on Streamlit, enabling users to enter their skincare needs and receive personalized product suggestions.
-- **Targeted for Melanin-Rich Skin**: Specifically focused on concerns like hyperpigmentation, dryness, and sensitivity that are more prevalent among women of color.
+- **Comprehensive Beauty Recommendations**: Uses a hybrid approach of content-based filtering, collaborative filtering, and sentiment analysis to generate personalized product suggestions across multiple beauty categories.
+- **User-Friendly Interface**: A Streamlit app allows users to easily input their beauty needs and preferences to receive tailored recommendations.
+- **Inclusive of Various Beauty Needs**: While initially focused on melanin-rich skincare, this system has evolved to recommend products for a broader range of users and beauty needs.
 
 ---
 
 ## Problem Statement
-Despite the growing demand for skincare products among women of color, most recommendation systems lack specificity in addressing concerns unique to melanin-rich skin. This project aims to bridge this gap by developing an inclusive recommendation system that leverages advanced AI techniques to provide targeted skincare solutions.
+Beauty product recommendation systems are often limited to specific categories, failing to address the varied and personalized needs of beauty consumers. This project bridges that gap, enabling an inclusive recommendation system covering a wide range of beauty products based on individual needs, preferences, and reviews.
 
 ## Objectives
-- **Develop** a recommendation system for melanin-rich skin using AI and ML techniques.
-- **Incorporate** content-based and collaborative filtering, as well as sentiment analysis, for accurate recommendations.
-- **Deploy** an accessible Streamlit interface for easy-to-use, personalized skincare suggestions.
+- **Develop** a recommendation system for multiple beauty product categories using advanced AI and ML techniques.
+- **Incorporate** a hybrid model that combines content-based, collaborative filtering, and sentiment analysis for accurate and comprehensive recommendations.
+- **Deploy** an accessible Streamlit app that provides easy-to-use, personalized recommendations across diverse beauty needs.
 
 ---
 
 ## Stakeholders
-- **End Users**: Women of color seeking skincare products tailored to their specific needs.
-- **Skincare Brands**: Companies interested in reaching this demographic more effectively.
-- **Healthcare Professionals**: Dermatologists who may use the system as a tool for recommending products suited to melanin-rich skin.
+- **End Users**: Individuals seeking personalized beauty product recommendations.
+- **Beauty Brands**: Companies aiming to better target and reach customers with personalized experiences.
+- **Healthcare and Beauty Professionals**: Dermatologists, cosmetologists, and wellness experts who may find this tool useful for recommending suitable products.
 
 ---
 
 ## Data Description
-The dataset used was collected via a Python-based web scraper and includes the following key elements:
+The dataset includes a variety of product categories, sourced via a Python-based web scraper and other datasets covering the following elements:
 
 1. **Product Data**: 
-   - Over 8,000 skincare products from the Sephora online store, including details on brand, ingredients, rating, price, and stock availability.
-   - Main Features: `product_id`, `product_name`, `brand_name`, `ingredients`, `rating`, `price_ksh`, `new`, `out_of_stock`, `highlights`.
+   - A diverse range of beauty products (over 10,000) from multiple categories, including skincare, haircare, supplements, makeup, and fragrances, with details on brand, ingredients, rating, price, and availability.
+   - Main Features: `product_id`, `product_name`, `category`, `brand_name`, `ingredients`, `rating`, `price`, `stock_status`, `highlights`.
 
 2. **User Reviews**:
-   - About 1 million reviews covering over 2,000 products in the skincare category, with details on user skin type, skin tone, and review ratings.
-   - Main Features: `author_id`, `rating`, `review_text`, `skin_type`, `skin_tone`, `helpfulness`.
+   - Over 1 million reviews covering products across different beauty categories, detailing users’ needs and preferences, such as skin type, hair type, review ratings, and purchase intent.
+   - Main Features: `author_id`, `rating`, `review_text`, `beauty_concern`, `helpfulness`.
 
 ---
 
 ## Exploratory Data Analysis (EDA)
-### Product Distribution by Skin Type
-![download](https://github.com/user-attachments/assets/afdbd9db-19a8-44db-803a-5741efe0c067)
-- The majority of products are labeled for combination skin, with fewer options for other types, guiding our recommendations for underserved demographics.
+### Product Distribution by Category
+- Displays the distribution of products across various beauty categories, such as skincare, haircare, and makeup.
 
-### Top Recommended Products for Melanin-Rich Skin
-![download](https://github.com/user-attachments/assets/8946f8fa-8448-4107-a84e-03e661bd4b6c)
-- Highlights top products for hyperpigmentation and hydration, addressing unique needs of women with melanin-rich skin.
+### Top Recommended Products Across Beauty Categories
+- Highlights top products for common beauty concerns, addressing the unique needs of users across skincare, haircare, and supplements.
 
-### Heatmap of Product Count by Skin Tone and Skin Type
-![download](https://github.com/user-attachments/assets/85e65e5a-60de-4f85-8d36-bbc1aa258743)
-- Reveals a shortage of options for deeper skin tones, underlining the need for tailored skincare products.
+### Heatmap of Product Count by Beauty Concern and Category
+- Reveals product availability and variety across different beauty concerns, underscoring the importance of tailored recommendations.
 
 ---
 
 ## Modeling Approach
-We used a hybrid recommendation system combining the following techniques:
+The project employs a hybrid recommendation system that includes the following techniques:
 
-1. **Content-Based Filtering**: Calculates product similarity based on ingredients using cosine similarity.
+1. **Content-Based Filtering**: Calculates product similarity based on ingredients, features, and category using cosine similarity.
 2. **Collaborative Filtering**: Utilizes Singular Value Decomposition (SVD) for user-product interaction patterns.
-3. **Sentiment Analysis**: Employs an LSTM model and Sentiment Intensity Analyzer to score reviews, prioritizing highly-rated products.
-4. **Hybrid Model**: Merges all techniques to deliver robust, personalized recommendations.
+3. **Sentiment Analysis**: Analyzes product reviews using an LSTM model and Sentiment Intensity Analyzer, helping prioritize products with positive feedback.
+4. **Hybrid Model**: Combines these methods to deliver well-rounded, personalized recommendations.
 
 ### Evaluation
 - **Precision**: Measures the relevance of the recommended products.
-- **Recall**: Evaluates how well the recommendations capture the user’s preferences.
-- **F1-Score**: Balances precision and recall to optimize recommendation accuracy.
+- **Recall**: Evaluates how well the recommendations align with users' preferences.
+- **F1-Score**: Balances precision and recall for optimized recommendation quality.
 
 ---
 
 ## System Interface
-The Streamlit app provides a simple, intuitive way for users to receive tailored skincare suggestions. Users input a product name or skin concern, and the app generates a list of recommended products based on their profile.
-![Home Page 1](https://github.com/user-attachments/assets/8f989d6e-5e7f-4f97-b2a1-51e21c5642c3)
-![Home Page 2](https://github.com/user-attachments/assets/5ab64f1a-9dd4-43cc-a055-3bf57ba4d170)
-![Highlights](https://github.com/user-attachments/assets/d07323a0-4f0d-4ffe-9c60-46bad479b709)
-![Content-Based](https://github.com/user-attachments/assets/62827675-c0e2-4fe1-86a5-96012e91e61a)
-
+The Streamlit app offers an intuitive interface for users to input their preferences and receive tailored recommendations for a wide variety of beauty products.
 
 ---
 
 ## Challenges and Solutions
-- **Data Limitations**: The dataset has limited diversity across brands, which we addressed by augmenting product features and expanding review sources.
-- **Model Optimization**: Balancing model performance in the hybrid approach required iterative fine-tuning.
-- **Sentiment Analysis**: Ensuring accurate sentiment classification was critical; challenges in NLP were addressed by refining the LSTM model.
+- **Data Diversity**: The dataset initially lacked variety across product types, addressed by expanding product categories and diversifying sources.
+- **Model Optimization**: Iterative tuning was necessary to balance performance in the hybrid model.
+- **Sentiment Analysis**: Improved sentiment classification accuracy by refining the LSTM model to better interpret user reviews.
 
 ---
 
 ## Future Improvements
-- **User Feedback Mechanism**: Incorporate feedback loops to allow users to rate recommendations, improving system accuracy.
-- **Dataset Expansion**: Increase the range of brands and product types to enhance recommendation quality.
-- **Partnerships**: Collaborate with skincare experts and dermatologists for validation and expanded reach.
+- **User Feedback**: Integrate a feedback mechanism allowing users to rate recommendations, enhancing model accuracy.
+- **Dataset Expansion**: Broaden product categories and brands to increase recommendation quality.
+- **Collaborations**: Partner with beauty experts to refine recommendations and expand system reach.
 
 ---
 
@@ -108,38 +100,50 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/Divinegrace05/AI-powered-Beauty-Product-Recommendations.git
    cd AI-powered-Beauty-Product-Recommendations
+   ```
 2. Install required packages:
     ```bash
     pip install -r requirements.txt
+    ```
 
 ### Usage
 To start the Streamlit application:
-    ```bash
-    streamlit run skincareApp.py
-
-
-## Repository Navigation
-
-This repository is structured to facilitate easy navigation and organization of files, datasets, scripts, and notebooks related to the AI-Powered Beauty Products Recommendation System project.
-
-### Directory Structure
-
-- **`data/`**: Contains the datasets used in this project. This includes both raw and processed data files that support the recommendation system and model training.
-- **`notebooks/`**: Jupyter notebooks for exploratory data analysis (EDA) and model training. Each notebook is organized to showcase various stages of analysis and model development.
-- **`models/`**: Contains saved machine learning models used in this project. These are ready-to-use models trained on the provided dataset.
-- **`scripts/`**: Python scripts that handle data preprocessing, feature engineering, and model evaluation. The scripts are modular to allow for easy adjustments and scaling.
-- **`app.py`**: The main Streamlit application file. This file runs the application, providing users with an interface to receive skincare product recommendations based on their inputs.
-- **`requirements.txt`**: Contains a list of all packages and dependencies required for the project. This file can be used to set up a virtual environment with the necessary libraries.
+   ```bash
+   streamlit run app.py
+   ```
 
 ---
 
-### Files and Scripts
+### Repository Structure
 
-- **`app.py`**: This is the primary file to run the Streamlit application. Launch this file using `streamlit run app.py` to access the recommendation system interface.
-- **`requirements.txt`**: Lists all dependencies required to run the project, ensuring that the environment is correctly set up. Install dependencies with `pip install -r requirements.txt`.
-- **`EDA_notebook.ipynb`**: This Jupyter notebook contains the exploratory data analysis (EDA), where we explore patterns, relationships, and insights within the dataset.
-- **`Modeling_notebook.ipynb`**: This notebook covers machine learning model training and evaluation, detailing the models used in the recommendation system and their respective performance metrics.
+- **`data/`**: Contains datasets used in this project for various beauty products.
+- **`notebooks/`**: Jupyter notebooks with EDA and model training steps.
+- **`models/`**: Stores saved machine learning models for product recommendation.
+- **`scripts/`**: Scripts for data preprocessing, feature engineering, and evaluation.
+- **`app.py`**: The main Streamlit application file.
+- **`requirements.txt`**: Lists dependencies for the project.
 
 ---
 
-Thank you for exploring the AI-Powered Beauty Products Recommendation System! This project is dedicated to inclusivity in the beauty industry by providing skincare recommendations specifically designed for melanin-rich skin.
+Thank you for exploring the AI-Powered Beauty Products Recommendation System! This project strives to provide an inclusive, customized beauty recommendation experience across a wide variety of products.
+
+---
+
+For Jupyter Notebook markdowns, here’s a suggested structure for each section:
+
+1. **Introduction**:
+   - Briefly introduce the expanded recommendation system and its purpose in providing diverse beauty recommendations.
+
+2. **Exploratory Data Analysis (EDA)**:
+   - Describe the analysis of product distributions, review sentiment, and patterns by category (e.g., makeup, haircare).
+   - Add visuals that showcase distribution across multiple beauty categories, along with any insights on product availability by need.
+
+3. **Modeling Section**:
+   - Explain the use of a hybrid model combining content-based, collaborative filtering, and sentiment analysis.
+   - Include subsections for each method with concise explanations.
+
+4. **Results and Evaluation**:
+   - Discuss evaluation metrics for the overall model and any category-specific insights.
+   - Summarize the performance of each component and highlight the strengths of the hybrid approach in producing relevant beauty recommendations.
+
+This revision will help align the README and notebook content with your project's broader scope and beauty focus. Let me know if there’s any specific markdown content you’d like more detail on!
